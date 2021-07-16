@@ -49,3 +49,19 @@ const data = [
 ]
 
 
+function CvIterator(profiles){
+    let nextindex = 0;
+    return{
+        next:function(){
+            return nextindex<profiles.length ?
+            {value:[nextindex++],done:false}:{done:true}
+        }
+    };
+}
+
+
+let next  = document.getElementById('next').addEventListener('click',nextCV);
+
+function nextCV(){
+    console.log("working");
+}
